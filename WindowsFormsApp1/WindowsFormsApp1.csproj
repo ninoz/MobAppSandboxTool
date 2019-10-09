@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ACA06743-80BF-4821-A674-956E6A24A779}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>MobileApplicationSanboxAnalyser</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Myrmec, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Myrmec.1.2.0\lib\net45\Myrmec.dll</HintPath>
+    </Reference>
+    <Reference Include="Myrmec.Mime, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Myrmec.Mime.1.2.0\lib\net45\Myrmec.Mime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="FileViewers\npp.7.7.1.bin\change.log" />
+    <None Include="FileViewers\npp.7.7.1.bin\updater\LICENSE" />
+    <None Include="FileViewers\npp.7.7.1.bin\updater\README.md" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FileViewers\npp.7.7.1.bin\plugins\doc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\actionscript.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\autoit.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\BaanC.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\batch.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\c.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\cmake.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\coffee.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\cpp.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\cs.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\css.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\html.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\java.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\javascript.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\lisp.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\lua.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\nsis.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\perl.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\php.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\python.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\rc.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\sql.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\tex.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\vb.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\vhdl.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\autoCompletion\xml.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\config.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\contextMenu.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\doLocalConf.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\functionList.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\langs.model.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\langs.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\license.txt" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\afrikaans.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\albanian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\arabic.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\aragonese.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\aranese.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\azerbaijani.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\basque.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\belarusian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\bengali.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\bosnian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\brazilian_portuguese.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\breton.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\bulgarian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\catalan.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\chinese.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\chineseSimplified.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\corsican.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\croatian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\czech.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\danish.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\dutch.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\english.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\english_customizable.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\esperanto.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\estonian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\extremaduran.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\farsi.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\finnish.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\french.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\friulian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\galician.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\georgian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\german.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\greek.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\gujarati.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\hebrew.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\hindi.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\hungarian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\indonesian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\italian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\japanese.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\kabyle.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\kannada.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\kazakh.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\korean.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\kurdish.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\kyrgyz.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\latvian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\ligurian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\lithuanian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\luxembourgish.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\macedonian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\malay.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\marathi.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\mongolian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\norwegian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\nynorsk.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\occitan.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\piglatin.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\polish.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\portuguese.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\punjabi.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\romanian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\russian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\samogitian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\sardinian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\serbian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\serbianCyrillic.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\sinhala.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\slovak.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\slovenian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\spanish.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\spanish_ar.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\swedish.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\tagalog.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\tajikCyrillic.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\tamil.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\tatar.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\telugu.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\thai.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\turkish.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\ukrainian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\urdu.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\uyghur.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\uzbek.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\uzbekCyrillic.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\vietnamese.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\welsh.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\localization\zulu.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\notepad++.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FileViewers\npp.7.7.1.bin\plugins\Config\nppPluginList.dll" />
+    <Content Include="FileViewers\npp.7.7.1.bin\plugins\mimeTools\mimeTools.dll" />
+    <Content Include="FileViewers\npp.7.7.1.bin\plugins\NppConverter\NppConverter.dll" />
+    <Content Include="FileViewers\npp.7.7.1.bin\plugins\NppExport\NppExport.dll" />
+    <Content Include="FileViewers\npp.7.7.1.bin\readme.txt" />
+    <Content Include="FileViewers\npp.7.7.1.bin\SciLexer.dll" />
+    <Content Include="FileViewers\npp.7.7.1.bin\shortcuts.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\stylers.model.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\stylers.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Bespin.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Black board.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Choco.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Deep Black.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Hello Kitty.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\HotFudgeSundae.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\khaki.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Mono Industrial.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Monokai.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\MossyLawn.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Navajo.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Obsidian.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Plastic Code Wrap.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Ruby Blue.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Solarized-light.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Solarized.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Twilight.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Vibrant Ink.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\vim Dark Blue.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\themes\Zenburn.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\updater\GUP.exe" />
+    <Content Include="FileViewers\npp.7.7.1.bin\updater\gup.xml" />
+    <Content Include="FileViewers\npp.7.7.1.bin\updater\libcurl.dll" />
+    <Content Include="FileViewers\npp.7.7.1.bin\userDefineLangs\userDefinedLang-markdown.default.modern.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
